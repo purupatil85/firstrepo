@@ -1,29 +1,32 @@
 
-public class Prime {
+class Prime {
 
 	public static void main(String[] args) {
-		 int max = 100;
-		 System.out.println("Generate Prime numbers between 1 and " + max);
+		 int i=0;
+		 int num = 100;
+		 String primeNumbers = "";
 
 		 // loop through the numbers one by one
-		        for (int i = 1; i<max; i++) 
+		        for (i = 1; i<=100; i++) 
 		{
-		            boolean isPrimeNumber = true;
+		            int cnt =0;
 		            // check to see if the number is prime
-		            for (int j = 2; j < i; j++)
+		            for(num =i; num>=1; num--)
 		                {
-		                if (i % j == 0) 
+		                if (i % num == 0) 
 		                   {
-		                    isPrimeNumber = false;
-		                    break; // exit the inner for loop
+		                    cnt=cnt+1;
+		                    
 		                    }
 		             }
 		          // print the number if prime
-		            if (isPrimeNumber) {
-		                System.out.print(i + " ");
+		            if (cnt==2) 
+		            {
+		            	primeNumbers = primeNumbers + i + " ";
 		          }
 		        }
-
+		        System.out.println("Prime numbers from 1 to 100 are :");
+		        System.out.println(primeNumbers);
 		    }
 
 
